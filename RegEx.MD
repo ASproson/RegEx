@@ -82,3 +82,14 @@ const hyphenate = words => {
 }
 ```
 Replace any white space with a hyphen
+
+```
+const extractNumber = str => {
+  let reg = /[0-9]/g;
+  let matched = str.match(reg);
+  let numbers = '';
+  matched.forEach(item => numbers += Number(item))
+  return Number(numbers);
+}
+```
+Find any numbers in a string, convert that string to number
